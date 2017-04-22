@@ -10,16 +10,15 @@ import UIKit
 
 class TradeViewController: UIViewController, NumbersKeyboardDelegate {
 
+   
     @IBOutlet weak var numberTextField: UITextField!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         numberTextField.becomeFirstResponder()
         numberTextField.tintColor = UIColor(hex: StockEnum.mainColor.rawValue)
         
-        let keyboardView = NumbersKeyboardView(frame: CGRect(x: 0, y: 0, width: 0, height: UIScreen.main.bounds.height * 0.4))
+        let keyboardView = NumbersKeyboardView(frame: CGRect(x: 0, y: 0, width: 0, height: UIScreen.main.bounds.height * 0.45))
         keyboardView.delegate = self
         numberTextField.inputView = keyboardView
 
