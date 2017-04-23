@@ -13,10 +13,12 @@
 		2F34BB291EAAE52D006EFB3A /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34BB281EAAE52D006EFB3A /* PortfolioViewController.swift */; };
 		2F34BB2B1EAAE536006EFB3A /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34BB2A1EAAE536006EFB3A /* TradeViewController.swift */; };
 		2F34BB2D1EAAE56E006EFB3A /* TimeRangeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34BB2C1EAAE56E006EFB3A /* TimeRangeControl.swift */; };
+		2F34BB2F1EAB4AA1006EFB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F34BB2E1EAB4AA1006EFB3A /* GoogleService-Info.plist */; };
 		2FA33E081EAA7B23000C1C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA33E071EAA7B23000C1C60 /* AppDelegate.swift */; };
 		2FA33E0D1EAA7B23000C1C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA33E0B1EAA7B23000C1C60 /* Main.storyboard */; };
 		2FA33E0F1EAA7B23000C1C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA33E0E1EAA7B23000C1C60 /* Assets.xcassets */; };
 		2FA33E121EAA7B23000C1C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA33E101EAA7B23000C1C60 /* LaunchScreen.storyboard */; };
+		2FB3068B1EACB1DE0012491A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3068A1EACB1DE0012491A /* Models.swift */; };
 		6C6496FA871BB535C00AB5B4 /* Pods_stocksApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CEAEDC2F9A7FF4245F482B2 /* Pods_stocksApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,12 +29,14 @@
 		2F34BB281EAAE52D006EFB3A /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		2F34BB2A1EAAE536006EFB3A /* TradeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
 		2F34BB2C1EAAE56E006EFB3A /* TimeRangeControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeRangeControl.swift; sourceTree = "<group>"; };
+		2F34BB2E1EAB4AA1006EFB3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FA33E041EAA7B23000C1C60 /* stocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA33E071EAA7B23000C1C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FA33E0C1EAA7B23000C1C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FA33E0E1EAA7B23000C1C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FA33E111EAA7B23000C1C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FA33E131EAA7B23000C1C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB3068A1EACB1DE0012491A /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		69B80E96630E9DA0F8CEA4FC /* Pods-stocksApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocksApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stocksApp/Pods-stocksApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6C55E8B64D9DA37D4379FAEE /* Pods-stocksApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocksApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-stocksApp/Pods-stocksApp.release.xcconfig"; sourceTree = "<group>"; };
 		8CEAEDC2F9A7FF4245F482B2 /* Pods_stocksApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stocksApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +88,7 @@
 				2F34BB221EAAE511006EFB3A /* LineGraphView.swift */,
 				2F34BB241EAAE51E006EFB3A /* NumbersKeyboardView.swift */,
 				2F34BB281EAAE52D006EFB3A /* PortfolioViewController.swift */,
+				2FB3068A1EACB1DE0012491A /* Models.swift */,
 				2F34BB2A1EAAE536006EFB3A /* TradeViewController.swift */,
 				2F34BB2C1EAAE56E006EFB3A /* TimeRangeControl.swift */,
 				2FA33E0B1EAA7B23000C1C60 /* Main.storyboard */,
@@ -91,6 +96,7 @@
 				2FA33E0E1EAA7B23000C1C60 /* Assets.xcassets */,
 				2FA33E101EAA7B23000C1C60 /* LaunchScreen.storyboard */,
 				2FA33E131EAA7B23000C1C60 /* Info.plist */,
+				2F34BB2E1EAB4AA1006EFB3A /* GoogleService-Info.plist */,
 			);
 			path = stocksApp;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 			files = (
 				2FA33E121EAA7B23000C1C60 /* LaunchScreen.storyboard in Resources */,
 				2F34BB271EAAE524006EFB3A /* NumbersKeyboard.xib in Resources */,
+				2F34BB2F1EAB4AA1006EFB3A /* GoogleService-Info.plist in Resources */,
 				2FA33E0F1EAA7B23000C1C60 /* Assets.xcassets in Resources */,
 				2FA33E0D1EAA7B23000C1C60 /* Main.storyboard in Resources */,
 			);
@@ -234,6 +241,7 @@
 				2F34BB2B1EAAE536006EFB3A /* TradeViewController.swift in Sources */,
 				2FA33E081EAA7B23000C1C60 /* AppDelegate.swift in Sources */,
 				2F34BB231EAAE511006EFB3A /* LineGraphView.swift in Sources */,
+				2FB3068B1EACB1DE0012491A /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

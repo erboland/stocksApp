@@ -8,11 +8,10 @@
 
 import UIKit
 
-
 class PortfolioViewController: UIViewController, TimeRangeControlDelegate {
+    
+    
 
-    @IBOutlet weak var scrollView: UIScrollView!
-  
     var lineGraphView: LineGraphView!
     var timeRangeControl: TimeRangeControl!
     
@@ -26,19 +25,15 @@ class PortfolioViewController: UIViewController, TimeRangeControlDelegate {
         self.lineGraphView.lineColor = UIColor(hex: StockEnum.mainColor.rawValue)
         self.lineGraphView.backgroundColor = UIColor.clear
         
-        self.lineGraphView.showStocksFor(.sixMonth, symbol: "GOOG")
-        
-
         self.timeRangeControl = TimeRangeControl(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 100))
         self.timeRangeControl.delegate = self
         
-        self.scrollView.addSubview(lineGraphView)
-        self.scrollView.addSubview(timeRangeControl)
+        self.view.addSubview(lineGraphView)
+        self.view.addSubview(timeRangeControl)
         
     }
     
     func selectedChanged(range: TimeRangeEnum) {
-        print(range)
         self.lineGraphView.showStocksFor(range, symbol: "GOOG")
     }
 

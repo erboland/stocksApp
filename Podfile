@@ -6,5 +6,10 @@ target 'stocksApp' do
   use_frameworks!
 
   # Pods for stocksApp
-  pod 'Alamofire', '~> 4.4'
+	pod 'Alamofire', '~> 4.4'
+	pod 'Firebase/Core'
+	pod 'Firebase/Messaging'
+	pod 'Firebase/Database'
+	pod 'Firebase/Auth'
+	pod 'Socket.IO-Client-Swift'
 end
