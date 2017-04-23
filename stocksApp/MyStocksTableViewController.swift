@@ -18,6 +18,7 @@ class MyStocksTableViewController: UITableViewController {
 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.navigationItem.title = "Assets"
+        print("ok")
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,20 +33,20 @@ class MyStocksTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0//lol.count
+        return lol.count
     }
 
 
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Asset", for: indexPath) as? AssetTableViewCell else {
-//            fatalError("lolix")
-//        }
-//        let lolix = lol[indexPath.row]
-//        cell.nameLabel.text = lolix
-//
-//    print("lol")
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Stock", for: indexPath) as? StockTableViewCell else {
+            fatalError("lolix")
+        }
+        let lolix = lol[indexPath.row]
+        cell.nameLabel.text = lolix
+
+    print("lol")
+        return cell
+    }
     
 
 

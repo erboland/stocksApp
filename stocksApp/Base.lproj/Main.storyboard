@@ -201,17 +201,17 @@
         <!--My Stocks Table View Controller-->
         <scene sceneID="dOz-3J-KmN">
             <objects>
-                <viewController storyboardIdentifier="MyStocks" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rQD-pD-tOy" customClass="MyStocksTableViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyStocks" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rQD-pD-tOy" customClass="MyStocksTableViewController" customModule="stocksApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="0eI-92-NRk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="oLJ-eJ-JHd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Stock" rowHeight="75" id="oLJ-eJ-JHd" customClass="StockTableViewCell" customModule="stocksApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLJ-eJ-JHd" id="9JJ-jN-Z99">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNN-6a-NM3">
@@ -245,6 +245,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="graphView" destination="8y0-rf-z33" id="ZXm-XM-49L"/>
+                                    <outlet property="growthLabel" destination="uNN-6a-NM3" id="SYW-Vm-RbW"/>
+                                    <outlet property="nameLabel" destination="Lsz-IQ-TIY" id="D6s-Kf-9K0"/>
+                                    <outlet property="sharesLabel" destination="FOI-nd-DX4" id="mFe-mp-SSD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -266,15 +272,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-ht-FKb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6pd-ht-FKb" firstAttribute="top" secondItem="lJU-jv-tWd" secondAttribute="top" id="3bI-Pt-8gB"/>
                             <constraint firstItem="6pd-ht-FKb" firstAttribute="leading" secondItem="lJU-jv-tWd" secondAttribute="leading" id="gI5-dw-fSM"/>
                             <constraint firstAttribute="trailing" secondItem="6pd-ht-FKb" secondAttribute="trailing" id="hCa-9e-DE1"/>
                             <constraint firstItem="uiA-Vv-Wc7" firstAttribute="top" secondItem="6pd-ht-FKb" secondAttribute="bottom" id="o10-Of-zy4"/>
+                            <constraint firstItem="6pd-ht-FKb" firstAttribute="top" secondItem="NiL-vK-Wqc" secondAttribute="bottom" id="y6r-jA-2uK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mhe-jd-ABO"/>

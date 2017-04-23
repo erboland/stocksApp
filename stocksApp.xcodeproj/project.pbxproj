@@ -28,6 +28,7 @@
 		CE2D8CE41EACBA5E00272995 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDC1EACBA5E00272995 /* SearchViewController.swift */; };
 		CE2D8CE51EACBA5E00272995 /* SideScrollViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */; };
 		CE2D8CE61EACBA5E00272995 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDE1EACBA5E00272995 /* CompanyViewController.swift */; };
+		CE2E9A871EACCA7F00AAC147 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		CE2D8CDC1EACBA5E00272995 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideScrollViewViewController.swift; sourceTree = "<group>"; };
 		CE2D8CDE1EACBA5E00272995 /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				CE2D8CD91EACBA5E00272995 /* NewsTableViewCell.swift */,
 				2FB3068C1EACC3070012491A /* StatsTableViewCell.swift */,
 				CE2D8CDA1EACBA5E00272995 /* OrdersTableViewCell.swift */,
+				CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				2F34BB2B1EAAE536006EFB3A /* TradeViewController.swift in Sources */,
 				CE2D8CDF1EACBA5E00272995 /* MyStocksTableViewController.swift in Sources */,
 				CE2D8CE31EACBA5E00272995 /* ProfileViewController.swift in Sources */,
+				CE2E9A871EACCA7F00AAC147 /* StockTableViewCell.swift in Sources */,
 				2FA33E081EAA7B23000C1C60 /* AppDelegate.swift in Sources */,
 				CE2D8CE41EACBA5E00272995 /* SearchViewController.swift in Sources */,
 				CE2D8CE21EACBA5E00272995 /* OrdersTableViewCell.swift in Sources */,
