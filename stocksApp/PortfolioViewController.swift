@@ -15,6 +15,7 @@ class PortfolioViewController: UIViewController, TimeRangeControlDelegate {
     var lineGraphView: LineGraphView!
     var timeRangeControl: TimeRangeControl!
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

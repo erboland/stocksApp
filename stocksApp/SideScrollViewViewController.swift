@@ -17,8 +17,6 @@ class SideScrollViewViewController: UIViewController {
         super.viewDidLoad()
         
         
-        sideScrollView.bounces = false
-        
         let V1: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "Profile"))!
         let V2: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "Portfolio"))!
         let V3: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "MyStocks"))!
@@ -31,34 +29,20 @@ class SideScrollViewViewController: UIViewController {
         V2.didMove(toParentViewController: self)
         V3.didMove(toParentViewController: self)
         
-        var V2frame: CGRect = V2.view.frame
-        V2frame.origin.x = self.view.frame.width
-        V2.view.frame = V2frame
+        let screen = UIScreen.main.bounds
         
-        var V3frame: CGRect = V3.view.frame
-        V3frame.origin.x = 2*self.view.frame.width
-        V3.view.frame = V3frame
+        V2.view.frame = CGRect(x: screen.width , y: 0, width: screen.width, height: screen.height)
         
+        V3.view.frame = CGRect(x: screen.width * 2 , y: 0, width: screen.width, height: screen.height)
+            
         self.sideScrollView.addSubview(V1.view)
         self.sideScrollView.addSubview(V2.view)
         self.sideScrollView.addSubview(V3.view)
-        self.sideScrollView.contentSize = CGSize(width: self.view.frame.width*3, height: self.view.frame.height - UIApplication.shared.statusBarFrame.height)
         
-        sideScrollView.contentOffset = CGPoint(x: self.view.frame.width, y: self.view.frame.minY)
+        self.sideScrollView.contentSize = CGSize(width: self.view.frame.width * 3, height: screen.height - 64 )
         
+        sideScrollView.contentOffset = CGPoint(x: self.view.frame.width, y: 0)
         
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

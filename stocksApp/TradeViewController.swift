@@ -76,8 +76,7 @@ class TradeViewController: UIViewController, NumbersKeyboardDelegate, UITextFiel
         numberTextField.insertText(character)
     }
     
-    
-    
+
     func deleteKey(){
         numberTextField.deleteBackward()
     }
