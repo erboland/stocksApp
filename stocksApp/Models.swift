@@ -10,29 +10,26 @@ import Foundation
 import Alamofire
 import SocketIO
 
-struct Socket {
+class Socket: NSObject {
     
-    var socket = SocketIOClient(socketURL: URL(string: "http://192.168.1.146:3000")!,config: [.forcePolling(true)])
-    
-    func connect(){
+
+    lazy var socket: SocketIOClient = SocketIOClient(socketURL: URL(string: "http://192.168.1.146:3000")!,config: [.forcePolling(true)])
+        
+    func onStocksOf(_ symbol: String, completion: @escaping (Any) -> ()){
         
         socket.on("connect") {data, ack in
-            self.socket.emit("getStocks", ["symbol": "GOOG"])
+            self.socket.emit("getStocks", ["symbol": symbol])
             
-            self.socket.on("stocksInfo/\(self.socket.sid!)") {data, ack in
-                print(data)
+            self.socket.on("stocksInfo/\(symbol)/\(self.socket.sid!)") {data, ack in
+                completion(data)
             }
         }
         
         socket.on("error") {data, ack in
             print("error occured")
         }
-    
-        socket.connect()
-    }
-    
-    func on(_ ref: String, completion: @escaping (AnyObject) -> ()){
         
+        socket.connect()
     }
     
 }
