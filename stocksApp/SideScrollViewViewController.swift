@@ -42,6 +42,7 @@ class SideScrollViewViewController: UIViewController {
         self.sideScrollView.addSubview(V3.view)
         self.sideScrollView.contentSize = CGSize(width: self.view.frame.width*3, height: self.view.frame.height)
         sideScrollView.contentOffset = CGPoint(x: self.view.frame.width, y: self.view.frame.minY)
+        print("lol")
     }
 
     
