@@ -9,17 +9,22 @@
 import UIKit
 
 class SideScrollViewViewController: UIViewController {
+    
+    
     @IBOutlet weak var sideScrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         sideScrollView.bounces = false
+        
         let V1: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "Profile"))!
         let V2: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "Main"))!
         let V3: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "V1"))!
+        
         self.addChildViewController(V3)
         self.addChildViewController(V2)
-self.addChildViewController(V1)
+        self.addChildViewController(V1)
+        
         V1.didMove(toParentViewController: self)
         V2.didMove(toParentViewController: self)
         V3.didMove(toParentViewController: self)

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
+    
     var containerView: UIView!
     var priceLabel: UILabel!
     var sharesLabel: UILabel!
@@ -96,7 +97,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegat
         statsTableView = UITableView(frame: CGRect(x: 0, y: newsTableView.frame.maxY+20.0, width: width, height: 500))
         statsTableView.delegate = self
         statsTableView.dataSource = self
-        statsTableView.register(StatsTableViewCell.self, forCellReuseIdentifier: "stat")
+        statsTableView.register(statsTableView.self, forCellReuseIdentifier: "stat")
         statsTableView.tag = 2
         statsTableView.rowHeight = 100
         
@@ -152,10 +153,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegat
             cell.newsLabel.text = newsArray[indexPath.row].text
             cell.dateLabel.text = newsArray[indexPath.row].date
         return cell
-        case 2:
-           let  cell = tableView.dequeueReusableCell(withIdentifier: "stat") as! StatsTableViewCell
-           
-           return cell
+//        case 2:
+//           let  cell = tableView.dequeueReusableCell(withIdentifier: "stat") as! StatsTableViewCell
+//           
+//           return cell
         case 3:
            let  cell = tableView.dequeueReusableCell(withIdentifier: "order") as! OrdersTableViewCell
            cell.textLabe.text = ordersArray[indexPath.row].text

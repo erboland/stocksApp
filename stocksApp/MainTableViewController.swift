@@ -34,16 +34,16 @@ class MainTableViewController: UITableViewController {
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Asset", for: indexPath) as? AssetTableViewCell else {
-            fatalError("lolix")
-        }
-        let lolix = lol[indexPath.row]
-        cell.nameLabel.text = lolix
-
-    print("lol")
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Asset", for: indexPath) as? AssetTableViewCell else {
+//            fatalError("lolix")
+//        }
+//        let lolix = lol[indexPath.row]
+//        cell.nameLabel.text = lolix
+//
+//    print("lol")
+//        return cell
+//    }
     
 
 
