@@ -250,6 +250,7 @@
                                     <outlet property="growthLabel" destination="uNN-6a-NM3" id="SYW-Vm-RbW"/>
                                     <outlet property="nameLabel" destination="Lsz-IQ-TIY" id="D6s-Kf-9K0"/>
                                     <outlet property="sharesLabel" destination="FOI-nd-DX4" id="mFe-mp-SSD"/>
+                                    <segue destination="e3l-0d-r3S" kind="show" id="shw-GT-NHF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

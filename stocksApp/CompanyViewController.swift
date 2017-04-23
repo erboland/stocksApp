@@ -18,6 +18,9 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
     var statsTableView: UITableView!
     var ordersTableView: UITableView!
     var mainScrollView: UIScrollView!
+    var ordersLabel: UILabel!
+    var statsLabel: UILabel!
+    var newsLabel: UILabel!
     var newsArray = [News]()
     var statsArray = [String]()
     var ordersArray = [Order]()
@@ -77,40 +80,47 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         sharesLabel.textColor = .black
         sharesLabel.textAlignment = .center
         
-        graphicView = UIView(frame: CGRect(x: 0, y: sharesLabel.frame.maxY+10.0, width: width, height: 300.0))
+        graphicView = UIView(frame: CGRect(x: 0, y: sharesLabel.frame.maxY+34.0, width: width, height: 300.0))
         graphicView.backgroundColor = .green
         
-        newsTableView = UITableView(frame: CGRect(x: 0, y: graphicView.frame.maxY+175.0, width: width, height: 400))
         
+
+        newsTableView = UITableView(frame: CGRect(x: 0, y: graphicView.frame.maxY+175.0, width: width, height: 400))
         newsTableView.delegate = self
         newsTableView.dataSource = self
         newsTableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "news")
         newsTableView.tag = 1
         newsTableView.backgroundColor = .black
         newsTableView.rowHeight = 100
+        newsLabel = UILabel(frame: CGRect(x: 0, y: newsTableView.frame.minY-24, width: self.view.bounds.width, height: 24))
+        newsLabel.text = "News"
         
 
 
         
-        
-        
-        statsTableView = UITableView(frame: CGRect(x: 0, y: newsTableView.frame.maxY+20.0, width: width, height: 500))
+
+        statsTableView = UITableView(frame: CGRect(x: 0, y: newsTableView.frame.maxY+34.0, width: width, height: 250))
         statsTableView.delegate = self
         statsTableView.dataSource = self
         statsTableView.register(StatsTableViewCell.self, forCellReuseIdentifier: "stat")
         statsTableView.tag = 2
-        statsTableView.rowHeight = 100
+        statsTableView.rowHeight = 50
+        
+        statsLabel = UILabel(frame: CGRect(x: 0, y: statsTableView.frame.minY-24, width: self.view.bounds.width, height: 24))
+        statsLabel.text = "Statistics"
         
         
         
-        
-        
-        ordersTableView = UITableView(frame: CGRect(x: 0, y: statsTableView.frame.maxY+20.0, width: width, height: 400))
+
+
+        ordersTableView = UITableView(frame: CGRect(x: 0, y: statsTableView.frame.maxY+34.0, width: width, height: 400))
         ordersTableView.delegate = self
         ordersTableView.dataSource = self
         ordersTableView.register(OrdersTableViewCell.self, forCellReuseIdentifier: "order")
         ordersTableView.tag = 3
         ordersTableView.rowHeight = 100
+        ordersLabel = UILabel(frame: CGRect(x: 0, y: ordersTableView.frame.minY-24, width: self.view.frame.width, height: 24))
+        ordersLabel.text = "Orders"
         
 
         
@@ -120,6 +130,10 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         mainScrollView.addSubview(newsTableView)
         mainScrollView.addSubview(statsTableView)
         mainScrollView.addSubview(ordersTableView)
+        mainScrollView.addSubview(ordersLabel)
+        mainScrollView.addSubview(statsLabel)
+        mainScrollView.addSubview(newsLabel)
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -153,10 +167,26 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
             cell.newsLabel.text = newsArray[indexPath.row].text
             cell.dateLabel.text = newsArray[indexPath.row].date
         return cell
-//        case 2:
-//           let  cell = tableView.dequeueReusableCell(withIdentifier: "stat") as! StatsTableViewCell
-//           
-//           return cell
+        case 2:
+           let  cell = tableView.dequeueReusableCell(withIdentifier: "stat") as! StatsTableViewCell
+           switch indexPath.row {
+           case 0:
+            cell.firstLabel.text = "OPEN"
+            cell.secondLabel.text = "VOLUME"
+           case 1:
+            cell.firstLabel.text = "HIGH"
+            cell.secondLabel.text = "AVG VOl"
+           case 2:
+            cell.firstLabel.text = "LOW"
+            cell.secondLabel.text = "MKT CAP"
+           case 3:
+            cell.firstLabel.text = "52WK HIGH"
+            cell.secondLabel.text = "P/E RATIO"
+           default:
+            cell.firstLabel.text = "52WK LOW"
+            cell.secondLabel.text = "D/Y/YIELD"
+           }
+           return cell
         case 3:
            let  cell = tableView.dequeueReusableCell(withIdentifier: "order") as! OrdersTableViewCell
            cell.textLabe.text = ordersArray[indexPath.row].text
@@ -167,7 +197,7 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         default:
             print("default")
             let cell = tableView.dequeueReusableCell(withIdentifier: "news")!
-        return cell
+            return cell
             
         }
 
