@@ -10,7 +10,7 @@ import UIKit
 
 class MyStocksTableViewController: UITableViewController {
 
-    let lol=["1", "2", "3"]
+    var stocks=[Stock]()
     
     
     override func viewDidLoad() {
@@ -19,11 +19,18 @@ class MyStocksTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.navigationItem.title = "Assets"
         print("ok")
+        loadingStocks()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
+    }
+    
+    func loadingStocks () {
+        for i in 1...10 {
+            stocks.append(Stock(stockName: "Name \(i)", shares: i, growth: i))
+        }
     }
 
     // MARK: - Table view data source
@@ -33,18 +40,19 @@ class MyStocksTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lol.count
+        return stocks.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Stock", for: indexPath) as? StockTableViewCell else {
-            fatalError("lolix")
+            fatalError("stocksix")
         }
-        let lolix = lol[indexPath.row]
-        cell.nameLabel.text = lolix
+        cell.nameLabel.text = stocks[indexPath.row].stockName
+        cell.sharesLabel.text = "\(stocks[indexPath.row].shares!) shares"
+        cell.growthLabel.text = "\(stocks[indexPath.row].growth!)"
 
-    print("lol")
+    print("stocks")
         return cell
     }
     
@@ -62,4 +70,10 @@ class MyStocksTableViewController: UITableViewController {
     }
     
 
+}
+
+struct Stock {
+    var stockName: String!
+    var shares: Int!
+    var growth: Int!
 }
