@@ -31,6 +31,10 @@ class PortfolioViewController: UIViewController, TimeRangeControlDelegate {
         self.view.addSubview(lineGraphView)
         self.view.addSubview(timeRangeControl)
         
+        Socket().onStocksOf("GOOG") { data in
+            print("data recied", data)
+        }
+        
     }
     
     func selectedChanged(range: TimeRangeEnum) {
