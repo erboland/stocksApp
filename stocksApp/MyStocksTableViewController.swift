@@ -8,9 +8,11 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class MyStocksTableViewController: UITableViewController {
 
     let lol=["1", "2", "3"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,20 +32,20 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lol.count
+        return 0//lol.count
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Asset", for: indexPath) as? AssetTableViewCell else {
-            fatalError("lolix")
-        }
-        let lolix = lol[indexPath.row]
-        cell.nameLabel.text = lolix
-
-    print("lol")
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Asset", for: indexPath) as? AssetTableViewCell else {
+//            fatalError("lolix")
+//        }
+//        let lolix = lol[indexPath.row]
+//        cell.nameLabel.text = lolix
+//
+//    print("lol")
+//        return cell
+//    }
     
 
 

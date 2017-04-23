@@ -9,17 +9,24 @@
 import UIKit
 
 class SideScrollViewViewController: UIViewController {
+    
+    
     @IBOutlet weak var sideScrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         sideScrollView.bounces = false
+        
         let V1: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "Profile"))!
-        let V2: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "Main"))!
-        let V3: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "V1"))!
+        let V2: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "Portfolio"))!
+        let V3: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "MyStocks"))!
+        
         self.addChildViewController(V3)
         self.addChildViewController(V2)
-self.addChildViewController(V1)
+        self.addChildViewController(V1)
+        
         V1.didMove(toParentViewController: self)
         V2.didMove(toParentViewController: self)
         V3.didMove(toParentViewController: self)
@@ -35,9 +42,11 @@ self.addChildViewController(V1)
         self.sideScrollView.addSubview(V1.view)
         self.sideScrollView.addSubview(V2.view)
         self.sideScrollView.addSubview(V3.view)
-        self.sideScrollView.contentSize = CGSize(width: self.view.frame.width*3, height: self.view.frame.height)
+        self.sideScrollView.contentSize = CGSize(width: self.view.frame.width*3, height: self.view.frame.height - UIApplication.shared.statusBarFrame.height)
+        
         sideScrollView.contentOffset = CGPoint(x: self.view.frame.width, y: self.view.frame.minY)
-        print("lol")
+        
+        
     }
 
     
