@@ -123,8 +123,8 @@
 				CE2D8CDC1EACBA5E00272995 /* SearchViewController.swift */,
 				2F34BB2A1EAAE536006EFB3A /* TradeViewController.swift */,
 				CE2D8CD71EACBA5E00272995 /* MyStocksTableViewController.swift */,
-				CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */,
 				2F34BB281EAAE52D006EFB3A /* PortfolioViewController.swift */,
+				CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

@@ -211,7 +211,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLJ-eJ-JHd" id="9JJ-jN-Z99">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNN-6a-NM3">
@@ -271,16 +271,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-ht-FKb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-ht-FKb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6pd-ht-FKb" firstAttribute="leading" secondItem="lJU-jv-tWd" secondAttribute="leading" id="gI5-dw-fSM"/>
-                            <constraint firstAttribute="trailing" secondItem="6pd-ht-FKb" secondAttribute="trailing" id="hCa-9e-DE1"/>
-                            <constraint firstItem="uiA-Vv-Wc7" firstAttribute="top" secondItem="6pd-ht-FKb" secondAttribute="bottom" id="o10-Of-zy4"/>
-                            <constraint firstItem="6pd-ht-FKb" firstAttribute="top" secondItem="NiL-vK-Wqc" secondAttribute="bottom" id="y6r-jA-2uK"/>
+                            <constraint firstItem="6pd-ht-FKb" firstAttribute="leading" secondItem="lJU-jv-tWd" secondAttribute="leading" id="3X8-8H-1FL"/>
+                            <constraint firstItem="6pd-ht-FKb" firstAttribute="top" secondItem="lJU-jv-tWd" secondAttribute="top" id="Shy-53-kER"/>
+                            <constraint firstItem="uiA-Vv-Wc7" firstAttribute="top" secondItem="6pd-ht-FKb" secondAttribute="bottom" id="bS4-1k-d9x"/>
+                            <constraint firstAttribute="trailing" secondItem="6pd-ht-FKb" secondAttribute="trailing" id="sOj-tn-Kg6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mhe-jd-ABO"/>
