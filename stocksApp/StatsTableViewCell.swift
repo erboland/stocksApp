@@ -36,6 +36,8 @@ class StatsTableViewCell: UITableViewCell {
         self.addSubview(secondLabel)
         self.addSubview(firstNumber)
         self.addSubview(secondNumber)
+        print("lol")
+        
         
     }
     
