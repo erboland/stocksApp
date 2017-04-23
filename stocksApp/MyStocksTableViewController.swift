@@ -8,9 +8,11 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class MyStocksTableViewController: UITableViewController {
 
     let lol=["1", "2", "3"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +32,7 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lol.count
+        return 0//lol.count
     }
 
 
