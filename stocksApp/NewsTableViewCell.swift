@@ -22,6 +22,7 @@ class NewsTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 super.init(style: style, reuseIdentifier: reuseIdentifier)
         newsLabel = UILabel (frame: CGRect(x: 0 , y: contentView.frame.minY + 2.5, width: contentView.frame.width-5, height: contentView.bounds.height*0.7))
+        newsLabel.font = UIFont(name: "Avenir Next Bold", size: 18)
         dateLabel = UILabel (frame: CGRect(x: 0, y: newsLabel.frame.maxY + 2.5, width: contentView.frame.width-5, height: contentView.bounds.height*0.3-2.5))
         arrowImage = UIImageView(frame: CGRect(x: contentView.bounds.width-5, y: contentView.frame.minY, width: 5, height: contentView.bounds.height))
         
