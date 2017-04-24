@@ -13,57 +13,41 @@
             <connections>
                 <outlet property="dateLabel" destination="b4B-xc-G2m" id="gF0-Dw-pDU"/>
                 <outlet property="priceLabel" destination="FR1-pi-Zcd" id="jMm-8x-t6b"/>
-                <outlet property="statsLabel" destination="UPf-pA-WZL" id="hEO-FV-XX9"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="410" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="410" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bqs-x8-Bba">
-                    <rect key="frame" x="0.0" y="124" width="410" height="30"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$83 (16%)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPf-pA-WZL">
-                            <rect key="frame" x="0.0" y="0.0" width="201" height="30"/>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                            <color key="textColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сегодня " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4B-xc-G2m">
-                            <rect key="frame" x="209" y="0.0" width="201" height="30"/>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="5T8-1D-P6x"/>
-                    </constraints>
-                </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1023.32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR1-pi-Zcd">
-                    <rect key="frame" x="0.0" y="64" width="410" height="60"/>
+                    <rect key="frame" x="0.0" y="0.0" width="410" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="qs8-cL-Irs"/>
+                        <constraint firstAttribute="height" constant="40" id="Sfx-OV-KgP"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="70"/>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="44"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$83 (16%) Сегодня " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4B-xc-G2m">
+                    <rect key="frame" x="0.0" y="40" width="410" height="25"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                    <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="bqs-x8-Bba" secondAttribute="trailing" id="6e2-n1-VhD"/>
-                <constraint firstItem="bqs-x8-Bba" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="C2N-dh-xVb"/>
-                <constraint firstItem="FR1-pi-Zcd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="LzV-9c-Jrt"/>
-                <constraint firstItem="FR1-pi-Zcd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Sh3-pM-ZsU"/>
-                <constraint firstAttribute="trailing" secondItem="FR1-pi-Zcd" secondAttribute="trailing" id="c3N-oo-w6y"/>
-                <constraint firstItem="bqs-x8-Bba" firstAttribute="top" secondItem="FR1-pi-Zcd" secondAttribute="bottom" id="ks1-d1-RZY"/>
+                <constraint firstAttribute="trailing" secondItem="FR1-pi-Zcd" secondAttribute="trailing" id="A65-PX-dPw"/>
+                <constraint firstItem="FR1-pi-Zcd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fci-by-pH8"/>
+                <constraint firstItem="b4B-xc-G2m" firstAttribute="top" secondItem="FR1-pi-Zcd" secondAttribute="bottom" id="a24-sY-ja2"/>
+                <constraint firstAttribute="trailing" secondItem="b4B-xc-G2m" secondAttribute="trailing" id="aEz-Ok-ojW"/>
+                <constraint firstItem="b4B-xc-G2m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oUH-78-ShB"/>
+                <constraint firstItem="FR1-pi-Zcd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tOW-is-VPJ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="44" y="139"/>
+            <point key="canvasLocation" x="44" y="84"/>
         </view>
     </objects>
 </document>

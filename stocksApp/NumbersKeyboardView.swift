@@ -13,7 +13,6 @@ protocol NumbersKeyboardDelegate: class {
     func deleteKey()
 }
 
-
 class NumbersKeyboardView: UIView {
     
     @IBOutlet weak var oneButton: UIButton!

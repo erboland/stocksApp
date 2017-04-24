@@ -8,17 +8,41 @@
 
 import UIKit
 
-class MyStocksTableViewController: UITableViewController {
+class MyStocksTableViewController: UITableViewController, TimeRangeControlDelegate{
 
-    var stocks=[Stock]()
+    var stocks = [Stock]()
     
+    var lineGraphView: LineGraphView!
+    var timeRangeControl: TimeRangeControl!
+    var stockPriceView: StockPriceView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = UIColor.clear
 
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationItem.title = "Assets"
-        print("ok")
+        stockPriceView = StockPriceView(frame: CGRect(x: 0, y: 8, width: view.frame.width, height: 100))
+       
+        lineGraphView = LineGraphView(frame: CGRect(x: 16, y: 108, width: view.frame.width - 32, height: 100))
+        lineGraphView.lineWidth = 3
+        lineGraphView.lineColor = UIColor.white
+        lineGraphView.backgroundColor = UIColor.clear
+        
+        timeRangeControl = TimeRangeControl(frame: CGRect(x: 0, y: 216, width: view.frame.width, height: 40))
+        timeRangeControl.delegate = self
+        
+        let wrapperView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 256))
+        
+        wrapperView.backgroundColor = UIColor(hex: "80C783")
+        wrapperView.addSubview(stockPriceView)
+        wrapperView.addSubview(lineGraphView)
+        wrapperView.addSubview(timeRangeControl)
+        
+        tableView.tableHeaderView = wrapperView
+        
         loadingStocks()
     }
 
@@ -27,9 +51,14 @@ class MyStocksTableViewController: UITableViewController {
 
     }
     
+    func selectedChanged(range: TimeRangeEnum) {
+        self.lineGraphView.showStocksFor(range, symbol: "GOOG")
+    }
+
+    
     func loadingStocks () {
         for i in 1...10 {
-            stocks.append(Stock(stockName: "Name \(i)", shares: i, growth: i))
+            stocks.append(Stock(stockName: "", shares: i, growth: i))
         }
     }
 

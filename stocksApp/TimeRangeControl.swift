@@ -73,12 +73,12 @@ class TimeRangeControl: UIControl {
         delegate?.selectedChanged(range: (items[selectedIndex].first?.value)!)
         
         for label in labels {
-            label.textColor = selectedColor
+            label.textColor = standartColor
         }
         
         let label = labels[selectedIndex]
         
-       
+        label
         label.textColor = UIColor.black
     }
     

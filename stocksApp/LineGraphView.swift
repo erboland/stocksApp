@@ -23,9 +23,6 @@ enum TimeRangeEnum: String {
     case year = "stocksForYear"
 }
 
-protocol LineGraphViewDelegate {
-    func lineGraph(DidSelected point: CGFloat)
-}
 
 class LineGraphView: UIView {
 
