@@ -31,9 +31,9 @@ class SideScrollViewViewController: UIViewController {
         
         let screen = UIScreen.main.bounds
         
-        V2.view.frame = CGRect(x: screen.width , y: 0, width: screen.width, height: screen.height)
+        V2.view.frame = CGRect(x: screen.width , y: 0, width: screen.width, height: screen.height - 64)
         
-        V3.view.frame = CGRect(x: screen.width * 2 , y: 0, width: screen.width, height: screen.height)
+        V3.view.frame = CGRect(x: screen.width * 2 , y: 0, width: screen.width, height: screen.height - 64)
             
         self.sideScrollView.addSubview(V1.view)
         self.sideScrollView.addSubview(V2.view)

@@ -20,6 +20,8 @@
 		2FA33E121EAA7B23000C1C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA33E101EAA7B23000C1C60 /* LaunchScreen.storyboard */; };
 		2FB3068B1EACB1DE0012491A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3068A1EACB1DE0012491A /* Models.swift */; };
 		2FB3068D1EACC3070012491A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3068C1EACC3070012491A /* StatsTableViewCell.swift */; };
+		2FB306941EAD04870012491A /* StockPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB306931EAD04870012491A /* StockPriceView.swift */; };
+		2FB306961EAD04C60012491A /* StockPrice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB306951EAD04C60012491A /* StockPrice.xib */; };
 		6C6496FA871BB535C00AB5B4 /* Pods_stocksApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CEAEDC2F9A7FF4245F482B2 /* Pods_stocksApp.framework */; };
 		CE2D8CDF1EACBA5E00272995 /* MyStocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CD71EACBA5E00272995 /* MyStocksTableViewController.swift */; };
 		CE2D8CE11EACBA5E00272995 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CD91EACBA5E00272995 /* NewsTableViewCell.swift */; };
@@ -47,6 +49,8 @@
 		2FA33E131EAA7B23000C1C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FB3068A1EACB1DE0012491A /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		2FB3068C1EACC3070012491A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		2FB306931EAD04870012491A /* StockPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPriceView.swift; sourceTree = "<group>"; };
+		2FB306951EAD04C60012491A /* StockPrice.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StockPrice.xib; sourceTree = "<group>"; };
 		69B80E96630E9DA0F8CEA4FC /* Pods-stocksApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocksApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stocksApp/Pods-stocksApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6C55E8B64D9DA37D4379FAEE /* Pods-stocksApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocksApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-stocksApp/Pods-stocksApp.release.xcconfig"; sourceTree = "<group>"; };
 		8CEAEDC2F9A7FF4245F482B2 /* Pods_stocksApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stocksApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +151,7 @@
 				2F34BB241EAAE51E006EFB3A /* NumbersKeyboardView.swift */,
 				2F34BB2C1EAAE56E006EFB3A /* TimeRangeControl.swift */,
 				2FB3068A1EACB1DE0012491A /* Models.swift */,
+				2FB306931EAD04870012491A /* StockPriceView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			children = (
 				2FA33E0B1EAA7B23000C1C60 /* Main.storyboard */,
 				2F34BB261EAAE524006EFB3A /* NumbersKeyboard.xib */,
+				2FB306951EAD04C60012491A /* StockPrice.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				2F34BB271EAAE524006EFB3A /* NumbersKeyboard.xib in Resources */,
 				2F34BB2F1EAB4AA1006EFB3A /* GoogleService-Info.plist in Resources */,
 				2FA33E0F1EAA7B23000C1C60 /* Assets.xcassets in Resources */,
+				2FB306961EAD04C60012491A /* StockPrice.xib in Resources */,
 				2FA33E0D1EAA7B23000C1C60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +310,7 @@
 				2F34BB2D1EAAE56E006EFB3A /* TimeRangeControl.swift in Sources */,
 				2F34BB2B1EAAE536006EFB3A /* TradeViewController.swift in Sources */,
 				CE2D8CDF1EACBA5E00272995 /* MyStocksTableViewController.swift in Sources */,
+				2FB306941EAD04870012491A /* StockPriceView.swift in Sources */,
 				CE2D8CE31EACBA5E00272995 /* ProfileViewController.swift in Sources */,
 				CE2E9A871EACCA7F00AAC147 /* StockTableViewCell.swift in Sources */,
 				2FA33E081EAA7B23000C1C60 /* AppDelegate.swift in Sources */,

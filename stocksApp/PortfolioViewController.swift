@@ -11,35 +11,30 @@ import UIKit
 class PortfolioViewController: UIViewController, TimeRangeControlDelegate {
     
     
-
-    var lineGraphView: LineGraphView!
-    var timeRangeControl: TimeRangeControl!
-    
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        self.lineGraphView = LineGraphView(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 100))
         
-        self.lineGraphView.lineWidth = 3
-        self.lineGraphView.lineColor = UIColor(hex: StockEnum.mainColor.rawValue)
-        self.lineGraphView.backgroundColor = UIColor.clear
-        
-        self.timeRangeControl = TimeRangeControl(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 100))
-        self.timeRangeControl.delegate = self
-        
-        self.view.addSubview(lineGraphView)
-        self.view.addSubview(timeRangeControl)
-        
-        Socket().onStocksOf("GOOG") { data in
-            print("data recied", data)
-        }
+//        self.graphWrapper.layer.cornerRadius = 4
+//        self.graphWrapper.backgroundColor = UIColor(hex: "EEEEEE")
+//        
+//        
+//        self.lineGraphView.lineWidth = 2
+//        self.lineGraphView.lineColor = UIColor(hex: StockEnum.mainColor.rawValue)
+//        self.lineGraphView.backgroundColor = UIColor.clear
+//        
+//      
+//        self.timeRangeControl.delegate = self
+//        
+//        Socket().onStocksOf("GOOG") { data in
+//            print("data recied", data)
+//        }
         
     }
     
     func selectedChanged(range: TimeRangeEnum) {
-        self.lineGraphView.showStocksFor(range, symbol: "GOOG")
+//        self.lineGraphView.showStocksFor(range, symbol: "GOOG")
     }
 
    
