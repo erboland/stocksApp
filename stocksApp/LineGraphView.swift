@@ -11,7 +11,7 @@ import Alamofire
 
 enum StockEnum: String{
     
-    case mainColor = "03A9F4"
+    case mainColor = "80C783"
 }
 
 enum TimeRangeEnum: String {
@@ -23,9 +23,6 @@ enum TimeRangeEnum: String {
     case year = "stocksForYear"
 }
 
-protocol LineGraphViewDelegate {
-    func lineGraph(DidSelected point: CGFloat)
-}
 
 class LineGraphView: UIView {
 

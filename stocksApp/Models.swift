@@ -13,7 +13,7 @@ import SocketIO
 class Socket: NSObject {
     
 
-    lazy var socket: SocketIOClient = SocketIOClient(socketURL: URL(string: "http://192.168.1.146:3000")!,config: [.forcePolling(true)])
+    lazy var socket: SocketIOClient = SocketIOClient(socketURL: URL(string: "http://10.27.115.137:3000")!,config: [.forcePolling(true)])
         
     func onStocksOf(_ symbol: String, completion: @escaping (Any) -> ()){
         
@@ -38,7 +38,7 @@ struct StocksModel {
     
     static func stocksFor(_ range: TimeRangeEnum, symbol: String, _ completion: @escaping ([CGFloat],[CGFloat: String]) -> Void ) {
         
-        Alamofire.request("http://192.168.1.146:3000/\(range.rawValue)/\(symbol)").responseJSON { response in
+        Alamofire.request("http://10.27.115.137:3000/\(range.rawValue)/\(symbol)").responseJSON { response in
             
             if let data = response.result.value as? NSArray{
                 
