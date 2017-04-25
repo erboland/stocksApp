@@ -272,8 +272,54 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLJ-eJ-JHd" id="9JJ-jN-Z99">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eVh-3O-4wa">
+                                            <rect key="frame" x="16" y="16" width="343" height="42.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SQb-Ds-cRg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="114.5" height="42.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67s-zh-ESP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="25"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDu-Ey-GdW">
+                                                            <rect key="frame" x="0.0" y="25" width="114.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9g-1D-4J8">
+                                                    <rect key="frame" x="114.5" y="0.0" width="114" height="42.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3V-Sw-PcH">
+                                                    <rect key="frame" x="228.5" y="0.0" width="114.5" height="42.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="eVh-3O-4wa" secondAttribute="bottom" constant="8" id="HR3-QO-YH1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="eVh-3O-4wa" secondAttribute="trailing" constant="8" id="aqr-pw-jrB"/>
+                                        <constraint firstItem="eVh-3O-4wa" firstAttribute="top" secondItem="9JJ-jN-Z99" secondAttribute="topMargin" constant="8" id="g5x-gi-eae"/>
+                                        <constraint firstItem="eVh-3O-4wa" firstAttribute="leading" secondItem="9JJ-jN-Z99" secondAttribute="leadingMargin" constant="8" id="sXq-BR-fGa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="growthLabel" destination="t3V-Sw-PcH" id="Vc0-tX-eV0"/>
+                                    <outlet property="nameLabel" destination="67s-zh-ESP" id="j6E-Ih-rX6"/>
+                                    <outlet property="priceLabel" destination="B9g-1D-4J8" id="a3r-yG-36U"/>
+                                    <outlet property="sharesLabel" destination="pDu-Ey-GdW" id="mi8-gY-Kk2"/>
                                     <segue destination="e3l-0d-r3S" kind="show" id="shw-GT-NHF"/>
                                 </connections>
                             </tableViewCell>

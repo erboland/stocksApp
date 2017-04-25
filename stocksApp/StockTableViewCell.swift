@@ -10,10 +10,12 @@ import UIKit
 
 class StockTableViewCell: UITableViewCell {
 
+   
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var sharesLabel: UILabel!
-    @IBOutlet weak var growthLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var growthLabel: UILabel!
+    
     
     var symbol: String! {
         didSet {
