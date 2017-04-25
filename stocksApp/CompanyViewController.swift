@@ -185,7 +185,7 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         case 1:
             
             let  cell = tableView.dequeueReusableCell(withIdentifier: "news") as! NewsTableViewCell
-            cell.newsLabel.text = newsArray[indexPath.row].text
+//            cell.newsLabel.text = newsArray[indexPath.row].text
             cell.dateLabel.text = newsArray[indexPath.row].date
         return cell
         case 2:
