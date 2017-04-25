@@ -182,30 +182,80 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="814.54272863568224"/>
         </scene>
-        <!--Search View Controller-->
-        <scene sceneID="htY-7Z-im6">
+        <!--Search Table View Controller-->
+        <scene sceneID="D3v-Bb-elM">
             <objects>
-                <viewController id="bEZ-3r-Wv0" customClass="SearchViewController" customModule="stocksApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GfV-jQ-iZy"/>
-                        <viewControllerLayoutGuide type="bottom" id="fhu-cD-f06"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6JF-Lu-4aN">
+                <tableViewController id="Xsa-2P-1Uc" customClass="SearchTableViewController" customModule="stocksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="lVZ-2p-Dvx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk8-wG-6zq">
-                                <rect key="frame" x="151" y="318" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Je4-T1-hsl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="73" id="zns-0e-aob" customClass="SearchTableViewCell" customModule="stocksApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zns-0e-aob" id="i27-yk-cCE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF6-JW-wWK">
+                                            <rect key="frame" x="16" y="16" width="150" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="Pby-wk-rIL"/>
+                                                <constraint firstAttribute="height" constant="20" id="j6c-Ga-7KL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVu-Yg-DLf">
+                                            <rect key="frame" x="16" y="36" width="200" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="2Sl-Mf-Qg3"/>
+                                                <constraint firstAttribute="width" constant="200" id="2r9-u7-uKL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1He-XQ-lp2">
+                                            <rect key="frame" x="321" y="21" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="CVs-47-Cef"/>
+                                                <constraint firstAttribute="width" constant="46" id="nHu-mX-M8k"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="addStock:" destination="zns-0e-aob" eventType="touchUpInside" id="GzB-hL-Mfd"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1He-XQ-lp2" firstAttribute="top" secondItem="i27-yk-cCE" secondAttribute="topMargin" constant="13" id="ZbS-J8-4ns"/>
+                                        <constraint firstItem="VF6-JW-wWK" firstAttribute="leading" secondItem="BVu-Yg-DLf" secondAttribute="leading" id="bpR-91-MW8"/>
+                                        <constraint firstItem="1He-XQ-lp2" firstAttribute="trailing" secondItem="i27-yk-cCE" secondAttribute="trailingMargin" id="e7t-Be-tKj"/>
+                                        <constraint firstItem="VF6-JW-wWK" firstAttribute="top" secondItem="i27-yk-cCE" secondAttribute="topMargin" constant="8" id="jjg-M0-VeD"/>
+                                        <constraint firstItem="BVu-Yg-DLf" firstAttribute="top" secondItem="VF6-JW-wWK" secondAttribute="bottom" id="y4j-Ln-5cz"/>
+                                        <constraint firstItem="BVu-Yg-DLf" firstAttribute="leading" secondItem="i27-yk-cCE" secondAttribute="leadingMargin" constant="8" id="zsN-Os-fRs"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addButton" destination="1He-XQ-lp2" id="0yB-kG-9tt"/>
+                                    <outlet property="desLabel" destination="BVu-Yg-DLf" id="SFm-d7-tSF"/>
+                                    <outlet property="nameLabel" destination="VF6-JW-wWK" id="7Aq-4U-tgT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Xsa-2P-1Uc" id="03P-Mt-Yhk"/>
+                            <outlet property="delegate" destination="Xsa-2P-1Uc" id="cxr-aU-Dvr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9Yd-tY-pcf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHI-nk-7nD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.2" y="1499.1004497751126"/>
+            <point key="canvasLocation" x="3176.8000000000002" y="1540.4797601199402"/>
         </scene>
         <!--My Stocks Table View Controller-->
         <scene sceneID="dOz-3J-KmN">
@@ -245,9 +295,12 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8y0-rf-z33">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k9-Ng-QOR">
                                                     <rect key="frame" x="122.5" y="0.0" width="98" height="42.5"/>
-                                                </view>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNN-6a-NM3">
                                                     <rect key="frame" x="245.5" y="0.0" width="97.5" height="42.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
@@ -265,16 +318,23 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="graphView" destination="8y0-rf-z33" id="ZXm-XM-49L"/>
                                     <outlet property="growthLabel" destination="uNN-6a-NM3" id="SYW-Vm-RbW"/>
                                     <outlet property="nameLabel" destination="Lsz-IQ-TIY" id="D6s-Kf-9K0"/>
+                                    <outlet property="priceLabel" destination="8k9-Ng-QOR" id="pJ7-bH-Zhe"/>
                                     <outlet property="sharesLabel" destination="FOI-nd-DX4" id="mFe-mp-SSD"/>
                                     <segue destination="e3l-0d-r3S" kind="show" id="shw-GT-NHF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8tH-iV-eGP"/>
+                    <navigationItem key="navigationItem" id="8tH-iV-eGP">
+                        <barButtonItem key="rightBarButtonItem" title="Поиск" id="TnD-zJ-vfS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="zvS-Ug-gEh" kind="presentation" id="Teq-kr-eGQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7m-yt-3wE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -373,7 +433,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cje-rM-gBT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="hnD-fX-ERW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hnD-fX-ERW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.50196078430000002" green="0.78039215689999997" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -389,6 +449,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCT-Kg-pcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="208.80000000000001" y="1127.5862068965519"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cos-ci-ZJD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zvS-Ug-gEh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nkh-2I-dHP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xsa-2P-1Uc" kind="relationship" relationship="rootViewController" id="IJk-QY-871"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIp-3D-6Fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2240.8000000000002" y="1599.8500749625189"/>
         </scene>
     </scenes>
 </document>

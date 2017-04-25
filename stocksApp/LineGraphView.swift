@@ -9,21 +9,6 @@
 import UIKit
 import Alamofire
 
-enum StockEnum: String{
-    
-    case mainColor = "80C783"
-}
-
-enum TimeRangeEnum: String {
-    case today = "stocksForToday"
-    case fiveDays = "stocksForFiveDays"
-    case month = "stocksForMonth"
-    case threeMonth = "stocksForThreeMonths"
-    case sixMonth = "stocksForSixMonths"
-    case year = "stocksForYear"
-}
-
-
 class LineGraphView: UIView {
 
     var linePath = UIBezierPath()
@@ -167,6 +152,17 @@ class LineGraphView: UIView {
             self.setNeedsDisplay()
         }
         
+    }
+    
+    func updateGraphFor(data: [CGFloat]){
+        
+        
+        linePath.removeAllPoints()
+        self.data = nil
+        self.setNeedsDisplay()
+        
+        self.data = data
+        self.setNeedsDisplay()
     }
     
 }

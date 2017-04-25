@@ -10,7 +10,13 @@ import UIKit
 
 class MyStocksTableViewController: UITableViewController, TimeRangeControlDelegate{
 
-    var stocks = [Stock]()
+    var stocks = [
+        "GOOG",
+        "AAPL",
+        "TSLA",
+        "YNDX",
+        "YHOO"
+    ]
     
     var lineGraphView: LineGraphView!
     var timeRangeControl: TimeRangeControl!
@@ -18,12 +24,7 @@ class MyStocksTableViewController: UITableViewController, TimeRangeControlDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.navigationController?.view.backgroundColor = UIColor.clear
-
+ 
         stockPriceView = StockPriceView(frame: CGRect(x: 0, y: 8, width: view.frame.width, height: 100))
        
         lineGraphView = LineGraphView(frame: CGRect(x: 16, y: 108, width: view.frame.width - 32, height: 100))
@@ -36,30 +37,25 @@ class MyStocksTableViewController: UITableViewController, TimeRangeControlDelega
         
         let wrapperView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 256))
         
-        wrapperView.backgroundColor = UIColor(hex: "80C783")
+        wrapperView.backgroundColor = UIColor(hex: StockEnum.mainColor.rawValue)
         wrapperView.addSubview(stockPriceView)
         wrapperView.addSubview(lineGraphView)
         wrapperView.addSubview(timeRangeControl)
         
+        
+        Socket().onStocksOf("GOOGL") { data in
+            print(data)
+        }
+        
+        lineGraphView.showStocksFor(.today, symbol: "GOOGL")
+        
         tableView.tableHeaderView = wrapperView
         
-        loadingStocks()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
-    }
     
     func selectedChanged(range: TimeRangeEnum) {
-        self.lineGraphView.showStocksFor(range, symbol: "GOOG")
-    }
-
-    
-    func loadingStocks () {
-        for i in 1...10 {
-            stocks.append(Stock(stockName: "", shares: i, growth: i))
-        }
+        self.lineGraphView.showStocksFor(range, symbol: "GOOGL")
     }
 
     // MARK: - Table view data source
@@ -77,19 +73,13 @@ class MyStocksTableViewController: UITableViewController, TimeRangeControlDelega
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Stock", for: indexPath) as? StockTableViewCell else {
             fatalError("stocksix")
         }
-        cell.nameLabel.text = stocks[indexPath.row].stockName
-        cell.sharesLabel.text = "\(stocks[indexPath.row].shares!) shares"
-        cell.growthLabel.text = "\(stocks[indexPath.row].growth!)"
+        cell.symbol = stocks[indexPath.row]
+        cell.sharesLabel.text = "Акций \(indexPath.row)"
+        cell.growthLabel.text = "\(indexPath.row)"
 
-    print("stocks")
         return cell
     }
     
-
-
-
-    
-
     
      //MARK: - Navigation
 

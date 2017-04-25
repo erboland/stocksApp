@@ -22,12 +22,13 @@
 		2FB3068D1EACC3070012491A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3068C1EACC3070012491A /* StatsTableViewCell.swift */; };
 		2FB306941EAD04870012491A /* StockPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB306931EAD04870012491A /* StockPriceView.swift */; };
 		2FB306961EAD04C60012491A /* StockPrice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB306951EAD04C60012491A /* StockPrice.xib */; };
+		2FBAEC181EAE25D100AE33FD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBAEC171EAE25D100AE33FD /* SearchTableViewCell.swift */; };
 		6C6496FA871BB535C00AB5B4 /* Pods_stocksApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CEAEDC2F9A7FF4245F482B2 /* Pods_stocksApp.framework */; };
 		CE2D8CDF1EACBA5E00272995 /* MyStocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CD71EACBA5E00272995 /* MyStocksTableViewController.swift */; };
 		CE2D8CE11EACBA5E00272995 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CD91EACBA5E00272995 /* NewsTableViewCell.swift */; };
 		CE2D8CE21EACBA5E00272995 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDA1EACBA5E00272995 /* OrdersTableViewCell.swift */; };
 		CE2D8CE31EACBA5E00272995 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDB1EACBA5E00272995 /* ProfileViewController.swift */; };
-		CE2D8CE41EACBA5E00272995 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDC1EACBA5E00272995 /* SearchViewController.swift */; };
+		CE2D8CE41EACBA5E00272995 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDC1EACBA5E00272995 /* SearchTableViewController.swift */; };
 		CE2D8CE51EACBA5E00272995 /* SideScrollViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */; };
 		CE2D8CE61EACBA5E00272995 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDE1EACBA5E00272995 /* CompanyViewController.swift */; };
 		CE2E9A871EACCA7F00AAC147 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */; };
@@ -51,6 +52,7 @@
 		2FB3068C1EACC3070012491A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
 		2FB306931EAD04870012491A /* StockPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPriceView.swift; sourceTree = "<group>"; };
 		2FB306951EAD04C60012491A /* StockPrice.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StockPrice.xib; sourceTree = "<group>"; };
+		2FBAEC171EAE25D100AE33FD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		69B80E96630E9DA0F8CEA4FC /* Pods-stocksApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocksApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stocksApp/Pods-stocksApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6C55E8B64D9DA37D4379FAEE /* Pods-stocksApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocksApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-stocksApp/Pods-stocksApp.release.xcconfig"; sourceTree = "<group>"; };
 		8CEAEDC2F9A7FF4245F482B2 /* Pods_stocksApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stocksApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +60,7 @@
 		CE2D8CD91EACBA5E00272995 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CE2D8CDA1EACBA5E00272995 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
 		CE2D8CDB1EACBA5E00272995 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CE2D8CDC1EACBA5E00272995 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CE2D8CDC1EACBA5E00272995 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideScrollViewViewController.swift; sourceTree = "<group>"; };
 		CE2D8CDE1EACBA5E00272995 /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,7 +126,7 @@
 			children = (
 				CE2D8CDE1EACBA5E00272995 /* CompanyViewController.swift */,
 				CE2D8CDB1EACBA5E00272995 /* ProfileViewController.swift */,
-				CE2D8CDC1EACBA5E00272995 /* SearchViewController.swift */,
+				CE2D8CDC1EACBA5E00272995 /* SearchTableViewController.swift */,
 				2F34BB2A1EAAE536006EFB3A /* TradeViewController.swift */,
 				CE2D8CD71EACBA5E00272995 /* MyStocksTableViewController.swift */,
 				2F34BB281EAAE52D006EFB3A /* PortfolioViewController.swift */,
@@ -140,6 +142,7 @@
 				2FB3068C1EACC3070012491A /* StatsTableViewCell.swift */,
 				CE2D8CDA1EACBA5E00272995 /* OrdersTableViewCell.swift */,
 				CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */,
+				2FBAEC171EAE25D100AE33FD /* SearchTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -310,11 +313,12 @@
 				2F34BB2D1EAAE56E006EFB3A /* TimeRangeControl.swift in Sources */,
 				2F34BB2B1EAAE536006EFB3A /* TradeViewController.swift in Sources */,
 				CE2D8CDF1EACBA5E00272995 /* MyStocksTableViewController.swift in Sources */,
+				2FBAEC181EAE25D100AE33FD /* SearchTableViewCell.swift in Sources */,
 				2FB306941EAD04870012491A /* StockPriceView.swift in Sources */,
 				CE2D8CE31EACBA5E00272995 /* ProfileViewController.swift in Sources */,
 				CE2E9A871EACCA7F00AAC147 /* StockTableViewCell.swift in Sources */,
 				2FA33E081EAA7B23000C1C60 /* AppDelegate.swift in Sources */,
-				CE2D8CE41EACBA5E00272995 /* SearchViewController.swift in Sources */,
+				CE2D8CE41EACBA5E00272995 /* SearchTableViewController.swift in Sources */,
 				CE2D8CE21EACBA5E00272995 /* OrdersTableViewCell.swift in Sources */,
 				2F34BB231EAAE511006EFB3A /* LineGraphView.swift in Sources */,
 				2FB3068B1EACB1DE0012491A /* Models.swift in Sources */,
