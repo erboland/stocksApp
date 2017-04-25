@@ -270,68 +270,10 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLJ-eJ-JHd" id="9JJ-jN-Z99">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="p21-RD-KGf">
-                                            <rect key="frame" x="16" y="16" width="343" height="42.5"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ybp-H6-6T4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97.5" height="42.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsz-IQ-TIY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="97.5" height="26"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-nd-DX4">
-                                                            <rect key="frame" x="0.0" y="26" width="97.5" height="16.5"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k9-Ng-QOR">
-                                                    <rect key="frame" x="122.5" y="0.0" width="98" height="42.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNN-6a-NM3">
-                                                    <rect key="frame" x="245.5" y="0.0" width="97.5" height="42.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="8y0-rf-z33" firstAttribute="leading" secondItem="FOI-nd-DX4" secondAttribute="trailing" constant="36" id="6Zn-cX-68E"/>
-                                        <constraint firstItem="Lsz-IQ-TIY" firstAttribute="leading" secondItem="9JJ-jN-Z99" secondAttribute="leadingMargin" constant="10" id="J6u-rN-lQV"/>
-                                        <constraint firstItem="8y0-rf-z33" firstAttribute="leading" secondItem="9JJ-jN-Z99" secondAttribute="leading" constant="156" id="LXW-H0-Rjv"/>
-                                        <constraint firstItem="Lsz-IQ-TIY" firstAttribute="top" secondItem="9JJ-jN-Z99" secondAttribute="topMargin" constant="2" id="TqT-MA-rR1"/>
-                                        <constraint firstItem="uNN-6a-NM3" firstAttribute="top" secondItem="9JJ-jN-Z99" secondAttribute="topMargin" constant="13" id="YUE-cM-hAG"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="FOI-nd-DX4" secondAttribute="bottom" constant="0.5" id="Yra-Gt-sge"/>
-                                        <constraint firstItem="uNN-6a-NM3" firstAttribute="centerY" secondItem="9JJ-jN-Z99" secondAttribute="centerY" constant="-1" id="fGp-kp-ptY"/>
-                                        <constraint firstItem="8y0-rf-z33" firstAttribute="top" secondItem="uNN-6a-NM3" secondAttribute="top" id="fqo-46-UYy"/>
-                                        <constraint firstItem="FOI-nd-DX4" firstAttribute="top" secondItem="Lsz-IQ-TIY" secondAttribute="bottom" constant="1" id="gae-jf-1uc"/>
-                                        <constraint firstItem="uNN-6a-NM3" firstAttribute="leading" secondItem="Lsz-IQ-TIY" secondAttribute="trailing" constant="196" id="nSv-xp-52C"/>
-                                        <constraint firstItem="FOI-nd-DX4" firstAttribute="leading" secondItem="Lsz-IQ-TIY" secondAttribute="leading" id="plv-sh-Gzz"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="uNN-6a-NM3" secondAttribute="trailing" constant="18" id="q0I-Cw-D20"/>
-                                        <constraint firstItem="8y0-rf-z33" firstAttribute="bottom" secondItem="uNN-6a-NM3" secondAttribute="bottom" id="s98-to-Oib"/>
-                                        <constraint firstItem="8y0-rf-z33" firstAttribute="centerX" secondItem="9JJ-jN-Z99" secondAttribute="centerX" id="va8-Ja-B69"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="growthLabel" destination="uNN-6a-NM3" id="SYW-Vm-RbW"/>
-                                    <outlet property="nameLabel" destination="Lsz-IQ-TIY" id="D6s-Kf-9K0"/>
-                                    <outlet property="priceLabel" destination="8k9-Ng-QOR" id="pJ7-bH-Zhe"/>
-                                    <outlet property="sharesLabel" destination="FOI-nd-DX4" id="mFe-mp-SSD"/>
                                     <segue destination="e3l-0d-r3S" kind="show" id="shw-GT-NHF"/>
                                 </connections>
                             </tableViewCell>
