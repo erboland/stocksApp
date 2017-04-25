@@ -10,6 +10,8 @@ import UIKit
 
 class CompanyTableViewController: UITableViewController {
 
+    let sections = ["News", "Staistics", "Orders"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,7 @@ class CompanyTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,18 +33,39 @@ class CompanyTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         
-        return 3
+        return sections.count
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sections[section]
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section {
+        case 1:
+            return 4
+        case 2:
+            return 5
+        case 3:
+            return 4
+        default:
+            fatalError("Errrooooooor")
+        }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        var cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        switch indexPath.section {
+        case 1:
+            cell = tableView.dequeueReusableCell(withIdentifier: "News") as! NewsTableViewCell
+        case 2:
+            cell = tableView.dequeueReusableCell(withIdentifier: "Stat") as! StatsTableViewCell
+        case 3:
+            cell = tableView.dequeueReusableCell(withIdentifier: "Order") as! OrdersTableViewCell
+        default:
+            fatalError("Erorrr")
+        }
    
 
         return cell

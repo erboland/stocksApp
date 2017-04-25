@@ -173,14 +173,14 @@
                         <viewControllerLayoutGuide type="bottom" id="m7g-Ij-Uu3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DsZ-qz-FO4">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCz-QA-Eth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.2" y="814.54272863568224"/>
+            <point key="canvasLocation" x="2858" y="809"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="D3v-Bb-elM">
@@ -320,7 +320,7 @@
                                     <outlet property="nameLabel" destination="67s-zh-ESP" id="j6E-Ih-rX6"/>
                                     <outlet property="priceLabel" destination="B9g-1D-4J8" id="a3r-yG-36U"/>
                                     <outlet property="sharesLabel" destination="pDu-Ey-GdW" id="mi8-gY-Kk2"/>
-                                    <segue destination="e3l-0d-r3S" kind="show" id="shw-GT-NHF"/>
+                                    <segue destination="Gf3-wJ-FWL" kind="show" id="qUK-0e-x4p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -394,20 +394,12 @@
             <objects>
                 <tableViewController id="Gf3-wJ-FWL" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ke6-tL-8td">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HPd-lP-aHg">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HPd-lP-aHg" id="IYI-We-3NT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="News" id="JdB-bS-OFP" customClass="NewsTableViewCell" customModule="stocksApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JdB-bS-OFP" id="B5s-f0-TFb">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -415,7 +407,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Stat" id="0fF-Qw-cqV" customClass="StatsTableViewCell" customModule="stocksApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0fF-Qw-cqV" id="yvk-3B-kMf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -423,7 +415,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Order" id="A1l-jQ-Xew">
-                                <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A1l-jQ-Xew" id="dtX-h5-vCL" customClass="OrdersTableViewCell" customModule="stocksApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -439,7 +431,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsF-xv-5IA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="1934"/>
+            <point key="canvasLocation" x="2015" y="809"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x6S-vf-qVf">
