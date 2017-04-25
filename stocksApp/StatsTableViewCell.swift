@@ -28,15 +28,16 @@ class StatsTableViewCell: UITableViewCell {
     }
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        firstLabel = UILabel(frame: CGRect(x: 0, y: self.frame.minY, width: self.frame.width/4, height: self.bounds.height))
-        secondLabel = UILabel(frame: CGRect(x: self.bounds.width/2, y: self.frame.minY, width: self.frame.width/4, height: self.bounds.height))
-        firstNumber = UILabel(frame: CGRect(x: self.bounds.width/4, y: self.frame.minY, width: self.frame.width/4, height: self.bounds.height))
-        secondNumber = UILabel(frame: CGRect(x: self.bounds.width*3/4, y: self.frame.minY, width: self.frame.width/4, height: self.bounds.height))
+        firstLabel = UILabel(frame: CGRect(x: 10, y: self.bounds.minY, width: self.bounds.width/4, height: self.bounds.height))
+        firstLabel.font = UIFont(name: "Avenir Next Medium", size: 18)
+        secondLabel = UILabel(frame: CGRect(x: self.bounds.width/2, y: self.bounds.minY, width: self.bounds.width/4, height: self.bounds.height))
+        secondLabel.font = UIFont(name: "Avenir Next Medium", size: 18)
+        firstNumber = UILabel(frame: CGRect(x: self.bounds.width/4, y: self.bounds.minY, width: self.bounds.width/4, height: self.bounds.height))
+        secondNumber = UILabel(frame: CGRect(x: self.bounds.width*3/4, y: self.bounds.minY, width: self.bounds.width/4, height: self.bounds.height))
         self.addSubview(firstLabel)
         self.addSubview(secondLabel)
         self.addSubview(firstNumber)
         self.addSubview(secondNumber)
-        print("lol")
         
         
     }

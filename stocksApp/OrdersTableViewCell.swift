@@ -29,10 +29,16 @@ class OrdersTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        textLabe = UILabel(frame: CGRect(x: 0, y: self.frame.minY, width: self.bounds.width/2, height: self.bounds.height/2))
-        dateLabel = UILabel(frame: CGRect(x: 0, y: self.frame.maxY+5, width: self.bounds.width/2, height: self.bounds.height/2-5))
+        textLabe = UILabel(frame: CGRect(x: 18, y: self.frame.minY, width: self.bounds.width/2, height: self.bounds.height/2))
+
+        textLabe.font = UIFont(name: "Avenir Next Bold", size: 18)
+        textLabe.text = "Market Buy"
+        dateLabel = UILabel(frame: CGRect(x: 18, y: self.frame.maxY+5, width: self.bounds.width/2, height: self.bounds.height/2-5))
+        dateLabel.font = UIFont(name: "Avenir Next Medium", size: 18)
         sharesLabel = UILabel(frame: CGRect(x: self.bounds.width/2, y: self.frame.minY, width: self.bounds.width/2 - 5, height: self.bounds.height/2))
-        priceLabel = UILabel(frame: CGRect(x: self.bounds.width/2, y: sharesLabel.frame.maxY+5, width: self.bounds.width/2 - 5, height: self.bounds.height-5))
+        sharesLabel.font = UIFont(name: "Avenir Next Medium", size: 18)
+        priceLabel = UILabel(frame: CGRect(x: self.bounds.width/2, y: sharesLabel.frame.maxY+5, width: self.bounds.width/2 - 5, height: self.bounds.height/2-5))
+        priceLabel.font = UIFont(name: "Avenir Next Medium", size: 18)
         arrowImage = UIImageView(frame: CGRect(x: sharesLabel.frame.maxX, y: self.frame.minY, width: 5, height: self.bounds.height))
         self.addSubview(textLabe)
         self.addSubview(dateLabel)

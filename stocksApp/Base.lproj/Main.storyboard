@@ -270,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLJ-eJ-JHd" id="9JJ-jN-Z99">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="p21-RD-KGf">
@@ -311,10 +311,20 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="p21-RD-KGf" secondAttribute="trailing" constant="8" id="2dp-kU-EpY"/>
-                                        <constraint firstItem="p21-RD-KGf" firstAttribute="top" secondItem="9JJ-jN-Z99" secondAttribute="topMargin" constant="8" id="Pfg-OL-ZhK"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="p21-RD-KGf" secondAttribute="bottom" constant="8" id="iFi-DA-0sE"/>
-                                        <constraint firstItem="p21-RD-KGf" firstAttribute="leading" secondItem="9JJ-jN-Z99" secondAttribute="leadingMargin" constant="8" id="oqY-10-qHt"/>
+                                        <constraint firstItem="8y0-rf-z33" firstAttribute="leading" secondItem="FOI-nd-DX4" secondAttribute="trailing" constant="36" id="6Zn-cX-68E"/>
+                                        <constraint firstItem="Lsz-IQ-TIY" firstAttribute="leading" secondItem="9JJ-jN-Z99" secondAttribute="leadingMargin" constant="10" id="J6u-rN-lQV"/>
+                                        <constraint firstItem="8y0-rf-z33" firstAttribute="leading" secondItem="9JJ-jN-Z99" secondAttribute="leading" constant="156" id="LXW-H0-Rjv"/>
+                                        <constraint firstItem="Lsz-IQ-TIY" firstAttribute="top" secondItem="9JJ-jN-Z99" secondAttribute="topMargin" constant="2" id="TqT-MA-rR1"/>
+                                        <constraint firstItem="uNN-6a-NM3" firstAttribute="top" secondItem="9JJ-jN-Z99" secondAttribute="topMargin" constant="13" id="YUE-cM-hAG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FOI-nd-DX4" secondAttribute="bottom" constant="0.5" id="Yra-Gt-sge"/>
+                                        <constraint firstItem="uNN-6a-NM3" firstAttribute="centerY" secondItem="9JJ-jN-Z99" secondAttribute="centerY" constant="-1" id="fGp-kp-ptY"/>
+                                        <constraint firstItem="8y0-rf-z33" firstAttribute="top" secondItem="uNN-6a-NM3" secondAttribute="top" id="fqo-46-UYy"/>
+                                        <constraint firstItem="FOI-nd-DX4" firstAttribute="top" secondItem="Lsz-IQ-TIY" secondAttribute="bottom" constant="1" id="gae-jf-1uc"/>
+                                        <constraint firstItem="uNN-6a-NM3" firstAttribute="leading" secondItem="Lsz-IQ-TIY" secondAttribute="trailing" constant="196" id="nSv-xp-52C"/>
+                                        <constraint firstItem="FOI-nd-DX4" firstAttribute="leading" secondItem="Lsz-IQ-TIY" secondAttribute="leading" id="plv-sh-Gzz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uNN-6a-NM3" secondAttribute="trailing" constant="18" id="q0I-Cw-D20"/>
+                                        <constraint firstItem="8y0-rf-z33" firstAttribute="bottom" secondItem="uNN-6a-NM3" secondAttribute="bottom" id="s98-to-Oib"/>
+                                        <constraint firstItem="8y0-rf-z33" firstAttribute="centerX" secondItem="9JJ-jN-Z99" secondAttribute="centerX" id="va8-Ja-B69"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -338,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7m-yt-3wE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="1127.5862068965519"/>
+            <point key="canvasLocation" x="300" y="1128"/>
         </scene>
         <!--Side Scroll View View Controller-->
         <scene sceneID="DRr-iU-XKQ">
@@ -448,7 +458,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCT-Kg-pcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.80000000000001" y="1127.5862068965519"/>
+            <point key="canvasLocation" x="-442" y="1128"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cos-ci-ZJD">
