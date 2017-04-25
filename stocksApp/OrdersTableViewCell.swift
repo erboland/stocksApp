@@ -31,7 +31,8 @@ class OrdersTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         textLabe = UILabel(frame: CGRect(x: 18, y: self.frame.minY, width: self.bounds.width/2, height: self.bounds.height/2))
 
-        textLabe.font = UIFont(name: "Avenir Next Medium", size: 18)
+        textLabe.font = UIFont(name: "Avenir Next Bold", size: 18)
+        textLabe.text = "Market Buy"
         dateLabel = UILabel(frame: CGRect(x: 18, y: self.frame.maxY+5, width: self.bounds.width/2, height: self.bounds.height/2-5))
         dateLabel.font = UIFont(name: "Avenir Next Medium", size: 18)
         sharesLabel = UILabel(frame: CGRect(x: self.bounds.width/2, y: self.frame.minY, width: self.bounds.width/2 - 5, height: self.bounds.height/2))

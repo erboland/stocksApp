@@ -87,10 +87,16 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         
         tradeView = UIView(frame: CGRect(x: 0, y: graphicView.frame.maxY, width: width, height: (self.view.frame.height-(navigationController?.navigationBar.frame.height)!)*0.15))
         print((self.view.frame.height-(navigationController?.navigationBar.frame.height)!)*0.15)
-//        buyButton = UIButton(frame: CGRect(x: , y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>))
-//        sellButton = UIButton(frame: CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>))
-//        tradeView.addSubview(buyButton)
-//        tradeView.addSubview(sellButton)
+        buyButton = UIButton(frame: CGRect(x: 40, y:tradeView.frame.height*0.15, width: 120, height: 64))
+        sellButton = UIButton(frame: CGRect(x: self.view.frame.width/2+40, y: tradeView.frame.height*0.15, width: 120, height: 64))
+        buyButton.backgroundColor = UIColor(hex: "\(StockEnum.mainColor.rawValue)")
+        buyButton.layer.cornerRadius = 4
+        sellButton.backgroundColor = UIColor(hex: "\(StockEnum.mainColor.rawValue)")
+        sellButton.layer.cornerRadius = 4
+        buyButton.setTitle("BUY", for: .normal)
+        sellButton.setTitle("SELL", for: .normal)
+        tradeView.addSubview(buyButton)
+        tradeView.addSubview(sellButton)
         
         
         
@@ -147,6 +153,7 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         mainScrollView.addSubview(newsLabel)
         mainScrollView.addSubview(tradeView)
         print(newsTableView.rowHeight)
+        print(self.view.frame.width)
         
     }
     
@@ -203,7 +210,6 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
            return cell
         case 3:
            let  cell = tableView.dequeueReusableCell(withIdentifier: "order") as! OrdersTableViewCell
-           cell.textLabe.text = ordersArray[indexPath.row].text
            cell.dateLabel.text = ordersArray[indexPath.row].date
            cell.priceLabel.text = ordersArray[indexPath.row].price
            cell.sharesLabel.text = ordersArray[indexPath.row].shares
