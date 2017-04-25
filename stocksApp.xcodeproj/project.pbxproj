@@ -32,6 +32,7 @@
 		CE2D8CE51EACBA5E00272995 /* SideScrollViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */; };
 		CE2D8CE61EACBA5E00272995 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D8CDE1EACBA5E00272995 /* CompanyViewController.swift */; };
 		CE2E9A871EACCA7F00AAC147 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */; };
+		CE2E9A8A1EAF59B800AAC147 /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9A891EAF59B800AAC147 /* CompanyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideScrollViewViewController.swift; sourceTree = "<group>"; };
 		CE2D8CDE1EACBA5E00272995 /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		CE2E9A861EACCA7F00AAC147 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		CE2E9A891EAF59B800AAC147 /* CompanyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		2FA33E061EAA7B23000C1C60 /* stocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE2E9A881EAF55FC00AAC147 /* New Group */,
 				2FA33E071EAA7B23000C1C60 /* AppDelegate.swift */,
 				2FB3068E1EACC3BC0012491A /* ViewControllers */,
 				2FB306911EACC4830012491A /* Views */,
@@ -131,6 +134,7 @@
 				CE2D8CD71EACBA5E00272995 /* MyStocksTableViewController.swift */,
 				2F34BB281EAAE52D006EFB3A /* PortfolioViewController.swift */,
 				CE2D8CDD1EACBA5E00272995 /* SideScrollViewViewController.swift */,
+				CE2E9A891EAF59B800AAC147 /* CompanyTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -175,6 +179,13 @@
 				8CEAEDC2F9A7FF4245F482B2 /* Pods_stocksApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE2E9A881EAF55FC00AAC147 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				CE2D8CE21EACBA5E00272995 /* OrdersTableViewCell.swift in Sources */,
 				2F34BB231EAAE511006EFB3A /* LineGraphView.swift in Sources */,
 				2FB3068B1EACB1DE0012491A /* Models.swift in Sources */,
+				CE2E9A8A1EAF59B800AAC147 /* CompanyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

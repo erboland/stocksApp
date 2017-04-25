@@ -74,7 +74,7 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         priceLabel.text = "$1023.3"
         priceLabel.textColor = .black
         priceLabel.textAlignment = .center
-        priceLabel.font = UIFont(name: "Avenir Next Medium", size: 80)
+        priceLabel.font = UIFont(name: "Avenir Next Medium", size: 64)
         sharesLabel = UILabel(frame: CGRect(x: 0, y: priceLabel.frame.maxY, width: width, height: (self.view.frame.height-(navigationController?.navigationBar.frame.height)!)*0.1))
         sharesLabel.text="shares"
         sharesLabel.textColor = .black
@@ -89,9 +89,9 @@ class CompanyViewController: UIViewController, UIScrollViewDelegate, UITableView
         print((self.view.frame.height-(navigationController?.navigationBar.frame.height)!)*0.15)
         buyButton = UIButton(frame: CGRect(x: 40, y:tradeView.frame.height*0.15, width: 120, height: 64))
         sellButton = UIButton(frame: CGRect(x: self.view.frame.width/2+40, y: tradeView.frame.height*0.15, width: 120, height: 64))
-        buyButton.backgroundColor = UIColor(hex: "\(StockEnum.mainColor.rawValue)")
+        buyButton.backgroundColor = UIColor(hex: StockEnum.mainColor.rawValue)
         buyButton.layer.cornerRadius = 4
-        sellButton.backgroundColor = UIColor(hex: "\(StockEnum.mainColor.rawValue)")
+        sellButton.backgroundColor = UIColor(hex: StockEnum.mainColor.rawValue)
         sellButton.layer.cornerRadius = 4
         buyButton.setTitle("BUY", for: .normal)
         sellButton.setTitle("SELL", for: .normal)
